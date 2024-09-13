@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="2fcd429f-738e-4e34-82a7-dd6924f31bf7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57187/Services/TeacherService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TeacherService.xsd" MetadataType="Schema" ID="2eef14f3-fa71-4f08-83bd-6232ccd4c8e4" SourceId="1" SourceUrl="http://localhost:57187/Services/TeacherService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TeacherService1.xsd" MetadataType="Schema" ID="2a2245b1-bafc-498d-a546-edb096f7a793" SourceId="1" SourceUrl="http://localhost:57187/Services/TeacherService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TeacherService2.xsd" MetadataType="Schema" ID="cfbcdb54-8b7a-4469-9eac-be4d9d1086f5" SourceId="1" SourceUrl="http://localhost:57187/Services/TeacherService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TeacherService.wsdl" MetadataType="Wsdl" ID="178fc407-c822-4359-b403-68f5f5cf08ef" SourceId="1" SourceUrl="http://localhost:57187/Services/TeacherService.svc?wsdl" />
+    <MetadataFile FileName="TeacherService.disco" MetadataType="Disco" ID="371d5b8b-0514-4755-b17b-421ca9172ee4" SourceId="1" SourceUrl="http://localhost:57187/Services/TeacherService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

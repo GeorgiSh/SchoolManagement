@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8843943F-92D7-4BE5-A22A-17FD3036E36A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SchoolManagement.Client</RootNamespace>
+    <AssemblyName>SchoolManagement.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ClassManagementWindow.xaml.cs">
+      <DependentUpon>ClassManagementWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EnrollmentServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollmentManagementWindow.xaml.cs">
+      <DependentUpon>EnrollmentManagementWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PersonManagementWindow.xaml.cs">
+      <DependentUpon>PersonManagementWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManagementWindow.xaml.cs">
+      <DependentUpon>StudentManagementWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherManagementWindow.xaml.cs">
+      <DependentUpon>TeacherManagementWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ClassManagementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnrollmentManagementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connected Services\ClassServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PersonServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\StudentServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TeacherServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PersonManagementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentManagementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherManagementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Connected Services\ClassServiceReference\ClassService.wsdl" />
+    <None Include="Connected Services\ClassServiceReference\ClassService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClassServiceReference\ClassService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClassServiceReference\ClassService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnrollmentServiceReference\EnrollmentService.wsdl" />
+    <None Include="Connected Services\EnrollmentServiceReference\EnrollmentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnrollmentServiceReference\EnrollmentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnrollmentServiceReference\EnrollmentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonServiceReference\PersonService.wsdl" />
+    <None Include="Connected Services\PersonServiceReference\PersonService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonServiceReference\PersonService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonServiceReference\PersonService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StudentServiceReference\StudentService.wsdl" />
+    <None Include="Connected Services\StudentServiceReference\StudentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StudentServiceReference\StudentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StudentServiceReference\StudentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TeacherServiceReference\TeacherService.wsdl" />
+    <None Include="Connected Services\TeacherServiceReference\TeacherService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TeacherServiceReference\TeacherService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TeacherServiceReference\TeacherService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\SchoolManagement.Models.Class.datasource" />
+    <None Include="Properties\DataSources\SchoolManagement.Models.Enrollment.datasource" />
+    <None Include="Properties\DataSources\SchoolManagement.Models.Person.datasource" />
+    <None Include="Properties\DataSources\SchoolManagement.Models.Student.datasource" />
+    <None Include="Properties\DataSources\SchoolManagement.Models.Teacher.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SchoolManagement.Models\SchoolManagement.Models\SchoolManagement.Models.csproj">
+      <Project>{64ad3bdd-b6b5-48e1-ad97-a81cbd28a2c3}</Project>
+      <Name>SchoolManagement.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SchoolManagement.Service\SchoolManagement.Service\SchoolManagement.Service.csproj">
+      <Project>{e36fbe54-7a15-4c48-9f60-94728b6934c9}</Project>
+      <Name>SchoolManagement.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ClassServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\EnrollmentServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\PersonServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\StudentServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\TeacherServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonServiceReference\PersonService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PersonServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StudentServiceReference\StudentService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StudentServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StudentServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StudentServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TeacherServiceReference\TeacherService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TeacherServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TeacherServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TeacherServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClassServiceReference\ClassService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClassServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClassServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClassServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnrollmentServiceReference\EnrollmentService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnrollmentServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnrollmentServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EnrollmentServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

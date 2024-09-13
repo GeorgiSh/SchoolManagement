@@ -1,0 +1,56 @@
+﻿<Window x:Class="SchoolManagement.Client.TeacherManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teacher Management" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Input Fields -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBlock Text="First Name:" />
+            <TextBox x:Name="txtFirstName" />
+
+            <TextBlock Text="Last Name:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtLastName" />
+
+            <TextBlock Text="Date of Birth:" Margin="0,10,0,0" />
+            <DatePicker x:Name="dpDateOfBirth" />
+
+            <TextBlock Text="Email:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtEmail" />
+
+            <TextBlock Text="Phone Number:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtPhoneNumber" />
+
+            <TextBlock Text="Hire Date:" Margin="0,10,0,0" />
+            <DatePicker x:Name="dpHireDate" />
+
+            <TextBlock Text="Department:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtDepartment" />
+
+            <TextBlock Text="Subject Specialization:" Margin="0,10,0,0" />
+            <TextBox x:Name="txtSubjectSpecialization" />
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Button x:Name="btnAddTeacher" Content="Add" Width="75" Click="btnAddTeacher_Click" />
+                <Button x:Name="btnUpdateTeacher" Content="Update" Width="75" Margin="10,0,0,0" Click="btnUpdateTeacher_Click" />
+                <Button x:Name="btnDeleteTeacher" Content="Delete" Width="75" Margin="10,0,0,0" Click="btnDeleteTeacher_Click" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Data Grid -->
+        <DataGrid x:Name="dgTeachers" Grid.Column="1" Margin="10" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dgTeachers_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding PersonId}" Width="Auto" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" Width="*" />
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" Width="*" />
+                <DataGridTextColumn Header="Department" Binding="{Binding Department}" Width="*" />
+                <DataGridTextColumn Header="Subject Specialization" Binding="{Binding SubjectSpecialization}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

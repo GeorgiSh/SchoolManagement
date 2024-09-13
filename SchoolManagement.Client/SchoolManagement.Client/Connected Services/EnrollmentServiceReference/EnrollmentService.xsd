@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57187/Services/EnrollmentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SchoolManagement.Models" />
+  <xs:element name="GetAllEnrollments">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEnrollmentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SchoolManagement.Models" minOccurs="0" name="GetAllEnrollmentsResult" nillable="true" type="q1:ArrayOfEnrollment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEnrollment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SchoolManagement.Models" minOccurs="0" name="enrollment" nillable="true" type="q2:Enrollment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEnrollmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEnrollment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SchoolManagement.Models" minOccurs="0" name="enrollment" nillable="true" type="q3:Enrollment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEnrollmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEnrollment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="enrollmentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEnrollmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="enrollmentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnrollmentByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SchoolManagement.Models" minOccurs="0" name="GetEnrollmentByIdResult" nillable="true" type="q4:Enrollment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

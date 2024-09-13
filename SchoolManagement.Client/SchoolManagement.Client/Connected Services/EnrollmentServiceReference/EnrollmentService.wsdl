@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="EnrollmentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57187/Services/EnrollmentService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57187/Services/EnrollmentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57187/Services/EnrollmentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SchoolManagement.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEnrollmentService_GetAllEnrollments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEnrollments" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_GetAllEnrollments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEnrollmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_AddEnrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEnrollment" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_AddEnrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_UpdateEnrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEnrollment" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_UpdateEnrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_DeleteEnrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEnrollment" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_DeleteEnrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_GetEnrollmentById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentById" />
+  </wsdl:message>
+  <wsdl:message name="IEnrollmentService_GetEnrollmentById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnrollmentByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEnrollmentService">
+    <wsdl:operation name="GetAllEnrollments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEnrollmentService/GetAllEnrollments" message="tns:IEnrollmentService_GetAllEnrollments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEnrollmentService/GetAllEnrollmentsResponse" message="tns:IEnrollmentService_GetAllEnrollments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEnrollment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEnrollmentService/AddEnrollment" message="tns:IEnrollmentService_AddEnrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEnrollmentService/AddEnrollmentResponse" message="tns:IEnrollmentService_AddEnrollment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEnrollment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEnrollmentService/UpdateEnrollment" message="tns:IEnrollmentService_UpdateEnrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEnrollmentService/UpdateEnrollmentResponse" message="tns:IEnrollmentService_UpdateEnrollment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEnrollment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEnrollmentService/DeleteEnrollment" message="tns:IEnrollmentService_DeleteEnrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEnrollmentService/DeleteEnrollmentResponse" message="tns:IEnrollmentService_DeleteEnrollment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEnrollmentService/GetEnrollmentById" message="tns:IEnrollmentService_GetEnrollmentById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEnrollmentService/GetEnrollmentByIdResponse" message="tns:IEnrollmentService_GetEnrollmentById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEnrollmentService" type="tns:IEnrollmentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllEnrollments">
+      <soap:operation soapAction="http://tempuri.org/IEnrollmentService/GetAllEnrollments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEnrollment">
+      <soap:operation soapAction="http://tempuri.org/IEnrollmentService/AddEnrollment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEnrollment">
+      <soap:operation soapAction="http://tempuri.org/IEnrollmentService/UpdateEnrollment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEnrollment">
+      <soap:operation soapAction="http://tempuri.org/IEnrollmentService/DeleteEnrollment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnrollmentById">
+      <soap:operation soapAction="http://tempuri.org/IEnrollmentService/GetEnrollmentById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EnrollmentService">
+    <wsdl:port name="BasicHttpBinding_IEnrollmentService" binding="tns:BasicHttpBinding_IEnrollmentService">
+      <soap:address location="http://localhost:57187/Services/EnrollmentService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

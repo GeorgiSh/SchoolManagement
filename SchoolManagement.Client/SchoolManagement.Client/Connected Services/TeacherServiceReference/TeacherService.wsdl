@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="TeacherService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57187/Services/TeacherService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57187/Services/TeacherService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57187/Services/TeacherService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SchoolManagement.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITeacherService_AddTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTeacher" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_AddTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTeacherResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacher" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeacherResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetAllTeachers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTeachers" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetAllTeachers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTeachersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_UpdateTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeacher" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_UpdateTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTeacherResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DeleteTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTeacher" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DeleteTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTeacherResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITeacherService">
+    <wsdl:operation name="AddTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/AddTeacher" message="tns:ITeacherService_AddTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/AddTeacherResponse" message="tns:ITeacherService_AddTeacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetTeacher" message="tns:ITeacherService_GetTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetTeacherResponse" message="tns:ITeacherService_GetTeacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTeachers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetAllTeachers" message="tns:ITeacherService_GetAllTeachers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetAllTeachersResponse" message="tns:ITeacherService_GetAllTeachers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/UpdateTeacher" message="tns:ITeacherService_UpdateTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/UpdateTeacherResponse" message="tns:ITeacherService_UpdateTeacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DeleteTeacher" message="tns:ITeacherService_DeleteTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DeleteTeacherResponse" message="tns:ITeacherService_DeleteTeacher_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITeacherService" type="tns:ITeacherService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/AddTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTeachers">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetAllTeachers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/UpdateTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/DeleteTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TeacherService">
+    <wsdl:port name="BasicHttpBinding_ITeacherService" binding="tns:BasicHttpBinding_ITeacherService">
+      <soap:address location="http://localhost:57187/Services/TeacherService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

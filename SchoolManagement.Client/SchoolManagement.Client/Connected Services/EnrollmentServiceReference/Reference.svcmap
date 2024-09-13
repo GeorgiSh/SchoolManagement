@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="0b945d89-f5ad-48f1-a222-1c7382d4f5ff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57187/Services/EnrollmentService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EnrollmentService.xsd" MetadataType="Schema" ID="b646f0e8-330c-43d4-8425-b6aed9527342" SourceId="1" SourceUrl="http://localhost:57187/Services/EnrollmentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EnrollmentService.disco" MetadataType="Disco" ID="d98e69ea-c437-4367-a395-ac352592d2dc" SourceId="1" SourceUrl="http://localhost:57187/Services/EnrollmentService.svc?disco" />
+    <MetadataFile FileName="EnrollmentService1.xsd" MetadataType="Schema" ID="0b0eeb8d-d0c3-497f-80ca-d7592c628f8e" SourceId="1" SourceUrl="http://localhost:57187/Services/EnrollmentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EnrollmentService2.xsd" MetadataType="Schema" ID="6d6f339e-81bd-4f3c-88af-c350269e455f" SourceId="1" SourceUrl="http://localhost:57187/Services/EnrollmentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EnrollmentService.wsdl" MetadataType="Wsdl" ID="784de9bf-fcdd-4d71-b874-f7ccd39a6468" SourceId="1" SourceUrl="http://localhost:57187/Services/EnrollmentService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
